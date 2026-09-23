@@ -96,22 +96,19 @@ const awards = [
     year: "2025",
     title: "AIC 全国赛一等奖",
     event: "AIC 相关全国大学生竞赛",
-    level: "国家级 / 一等奖",
-    file: "assets/awards/2025-aic-national-first.pdf"
+    level: "国家级 / 一等奖"
   },
   {
     year: "2026",
     title: "全国大学生物联网设计大赛",
     event: "全国决赛",
-    level: "国家级 / 二等奖",
-    file: "assets/awards/2026-iot-national-second.pdf"
+    level: "国家级 / 二等奖"
   },
   {
     year: "2026",
     title: "中国大学生服务外包创新创业大赛",
     event: "全国赛",
-    level: "国家级 / 三等奖",
-    file: "assets/awards/2026-service-outsourcing-national-third.pdf"
+    level: "国家级 / 三等奖"
   }
 ];
 
@@ -167,7 +164,7 @@ function renderAwards() {
       <p class="award-level">${award.level}</p>
       <h3>${award.title}</h3>
       <p class="award-event">${award.event}</p>
-      <a class="card-link" href="${award.file}" target="_blank" rel="noreferrer">查看证书 <i data-lucide="file-text"></i></a>
+      <span class="award-note"><i data-lucide="shield-check"></i> 仅展示获奖信息</span>
     </article>
   `).join("");
   iconRefresh();

@@ -367,6 +367,8 @@ h1 em, h2 em, .detail-title em { color: var(--cyan); font-style: normal; }
 .award-level { margin-bottom: 10px; color: var(--orange); font-family: var(--mono); font-size: 11px; }
 .award-card h3 { max-width: 360px; margin-bottom: 8px; font-size: 20px; line-height: 1.35; }
 .award-event { min-height: 48px; margin-bottom: 22px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.award-note { display: inline-flex; align-items: center; gap: 7px; color: var(--subtle); font-family: var(--mono); font-size: 10px; }
+.award-note svg { width: 14px; height: 14px; color: var(--cyan); }
 
 .about-section { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr); gap: 16px; }
 .about-panel { padding: 42px; background: var(--cream); color: var(--ink); }
