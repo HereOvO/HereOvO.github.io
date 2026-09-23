@@ -91,6 +91,30 @@ const projects = [
   }
 ];
 
+const awards = [
+  {
+    year: "2025",
+    title: "AIC 全国赛一等奖",
+    event: "AIC 相关全国大学生竞赛",
+    level: "国家级 / 一等奖",
+    file: "assets/awards/2025-aic-national-first.pdf"
+  },
+  {
+    year: "2026",
+    title: "全国大学生物联网设计大赛",
+    event: "全国决赛",
+    level: "国家级 / 二等奖",
+    file: "assets/awards/2026-iot-national-second.pdf"
+  },
+  {
+    year: "2026",
+    title: "中国大学生服务外包创新创业大赛",
+    event: "全国赛",
+    level: "国家级 / 三等奖",
+    file: "assets/awards/2026-service-outsourcing-national-third.pdf"
+  }
+];
+
 function iconRefresh() {
   if (window.lucide) window.lucide.createIcons();
 }
@@ -128,6 +152,25 @@ function renderProjects() {
       });
     });
   });
+}
+
+function renderAwards() {
+  const grid = document.querySelector("#award-grid");
+  if (!grid) return;
+  grid.innerHTML = awards.map((award, index) => `
+    <article class="award-card">
+      <div class="award-top">
+        <span class="award-number">0${index + 1}</span>
+        <span class="award-year">${award.year}</span>
+      </div>
+      <div class="award-seal" aria-hidden="true"><i data-lucide="award"></i></div>
+      <p class="award-level">${award.level}</p>
+      <h3>${award.title}</h3>
+      <p class="award-event">${award.event}</p>
+      <a class="card-link" href="${award.file}" target="_blank" rel="noreferrer">查看证书 <i data-lucide="file-text"></i></a>
+    </article>
+  `).join("");
+  iconRefresh();
 }
 
 function renderDetail() {
@@ -193,6 +236,7 @@ function setupNavigation() {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
+  renderAwards();
   renderDetail();
   setupNavigation();
   const year = document.querySelector("#year");
