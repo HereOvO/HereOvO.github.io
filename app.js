@@ -1,92 +1,92 @@
 const projects = [
   {
     id: "wheeled-leg-robot",
-    title: "Wheeled-leg robot",
+    title: "?????",
     category: "robotics",
-    kind: "robotics / platform",
-    description: "A controller foundation for a wheeled-leg robot, balancing low-level motion control with a platform that can grow.",
-    tags: ["STM32", "robotics", "control"],
+    kind: "??? / ????",
+    description: "?????????????,????????????????",
+    tags: ["STM32", "???", "??"],
     repo: "https://github.com/HereOvO/wheeled-leg-robot",
-    role: "Robot controller",
+    role: "?????",
     stack: "C / STM32",
-    status: "Active",
-    context: "A hardware-first controller project exploring how a compact mobile platform can combine rolling and legged motion.",
+    status: "???",
+    context: "???????????????,????????????????????????",
     details: [
-      "Designed around repeatable controller behavior instead of a one-off demo path.",
-      "Keeps hardware-facing code organized so motor, sensor, and platform work can evolve independently.",
-      "Acts as a base for future field tests, tuning records, and mechanical iterations."
+      "????????????,???????????",
+      "??????????????,?????????",
+      "????????????????????????"
     ]
   },
   {
     id: "stm32-remote-upgrade",
-    title: "STM32 remote upgrade",
+    title: "STM32 ????",
     category: "firmware",
-    kind: "firmware / reliability",
-    description: "Remote firmware upgrade using an ESP32-S3 as an auxiliary controller for STM32 systems.",
+    kind: "?? / ???",
+    description: "?? ESP32-S3 ?? STM32 ??????????????",
     tags: ["STM32", "ESP32-S3", "OTA"],
     repo: "https://github.com/HereOvO/STM32-remote-upgrade",
-    role: "Upgrade path",
+    role: "????",
     stack: "C / ESP32-S3",
-    status: "Prototype",
-    context: "A practical OTA direction that treats the update process as part of the product, including the auxiliary communication layer.",
+    status: "??",
+    context: "????????????????????,???????????",
     details: [
-      "Uses an ESP32-S3 as a bridge around the STM32 firmware update workflow.",
-      "Targets a repeatable remote update path for embedded devices with limited physical access.",
-      "Leaves room for stronger rollback, image validation, and field recovery strategies."
+      "?? ESP32-S3 ?? STM32 ????????????",
+      "?????????????????????????",
+      "???????????????????????"
     ]
   },
   {
     id: "line-inspection-and-target-shooting",
-    title: "Line inspection & target shooting",
+    title: "????????",
     category: "robotics",
-    kind: "competition / sensing",
-    description: "A competition robot project combining line inspection, target acquisition, and timed actuation.",
-    tags: ["STM32", "sensing", "competition"],
+    kind: "?? / ????",
+    description: "?????????????????????????",
+    tags: ["STM32", "??", "??"],
     repo: "https://github.com/HereOvO/Line-inspection-and-target-shooting",
-    role: "System integration",
-    stack: "C / real-time I/O",
-    status: "Completed",
-    context: "A time-constrained system where sensing, decision-making, and physical actuation have to agree under pressure.",
+    role: "????",
+    stack: "C / ?? I/O",
+    status: "???",
+    context: "??????????????,?????????????????????",
     details: [
-      "Connects line-following behavior with target shooting in one control loop.",
-      "Turns competition rules into explicit state transitions and hardware actions.",
-      "Provides a useful baseline for documenting tuning, failure cases, and test runs."
+      "?????????????????????",
+      "?????????????????????",
+      "?????????????????????????"
     ]
   },
   {
     id: "single-usb-burning-for-ab-partition",
-    title: "Single USB A/B burning",
+    title: "? USB A/B ????",
     category: "firmware",
-    kind: "firmware / boot flow",
-    description: "A single-USB programming path for STM32F407 A/B partitions, with room for OTA-style deployment.",
-    tags: ["STM32F407", "bootloader", "A/B"],
+    kind: "?? / ????",
+    description: "?? STM32F407 A/B ???? USB ????,?? OTA ????????",
+    tags: ["STM32F407", "Bootloader", "A/B"],
     repo: "https://github.com/HereOvO/Single-USB-burning-for-AB-partition",
-    role: "Boot workflow",
+    role: "???????",
     stack: "C / STM32",
-    status: "Working",
-    context: "An experiment in making firmware deployment safer and simpler by treating two application partitions as a normal part of the boot flow.",
+    status: "???",
+    context: "?????????????????????,????????????????????",
     details: [
-      "Targets an STM32F407VET6 system with two application partitions.",
-      "Keeps a single USB connection at the center of the programming workflow.",
-      "Creates a foundation for future validation, rollback, and peripheral-assisted OTA behavior."
+      "???????????? STM32F407VET6 ???",
+      "??? USB ????????????",
+      "??????????????? OTA ????"
     ]
   },
   {
     id: "desktop-wallpaper-display",
-    title: "Desktop wallpaper display",
+    title: "???????",
     category: "tools",
-    kind: "tool / hardware",
-    description: "A compact desktop display project that brings a changing visual surface into the physical workspace.",
-    tags: ["STM32", "display", "hardware"],
+    kind: "?? / ????",
+    description: "??????????????????????????",
+    tags: ["STM32", "??", "??"],
     repo: "https://github.com/HereOvO/Desktop-wallpaper-display",
-    role: "Device prototype",
-    stack: "C / embedded display",
-    status: "Experiment",
-    context: "A smaller hardware project that sits outside the robot path but keeps the same interest in turning code into a tangible object.",
+    role: "????",
+    stack: "C / ?????",
+    status: "??",
+    context: "???????????,?????????????????????????",
     details: [
-      "Explores a small-form-factor display built for a desktop environment.",
-      "Combines firmware, display driving, and a simple physical product boundary.",
-      "Useful as a compact testbed for UI, image handling, and device packaging."
+      "?????????????????",
+      "??????????????????????",
+      "???? UI??????????????????"
     ]
   }
 ];
@@ -106,7 +106,7 @@ function projectCard(project, index) {
       <p>${project.description}</p>
       <div class="card-footer">
         <div class="tags">${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>
-        <a class="card-link" href="project.html?id=${project.id}">details <i data-lucide="arrow-up-right"></i></a>
+        <a class="card-link" href="project.html?id=${project.id}">?? <i data-lucide="arrow-up-right"></i></a>
       </div>
     </article>
   `;
@@ -138,24 +138,24 @@ function renderDetail() {
   document.title = `${project.title} / HereOvO`;
   target.innerHTML = `
     <p class="eyebrow">${project.kind}</p>
-    <h1 class="detail-title">${project.title.replace(" & ", " <em>&</em> ")}</h1>
+    <h1 class="detail-title">${project.title}</h1>
     <p class="detail-description">${project.description}</p>
     <div class="detail-meta">
-      <div><span>role</span><strong>${project.role}</strong></div>
-      <div><span>stack</span><strong>${project.stack}</strong></div>
-      <div><span>status</span><strong>${project.status}</strong></div>
+      <div><span>??</span><strong>${project.role}</strong></div>
+      <div><span>???</span><strong>${project.stack}</strong></div>
+      <div><span>??</span><strong>${project.status}</strong></div>
     </div>
     <div class="detail-body">
       <div>
-        <h2>What this project is testing.</h2>
+        <h2>??????????</h2>
         <p>${project.context}</p>
-        <p>This page is intentionally concise. The source repository remains the living record for implementation details, hardware changes, and future iterations.</p>
-        <a class="button button-primary" href="${project.repo}" target="_blank" rel="noreferrer">Open repository <i data-lucide="github"></i></a>
+        <p>??????????,??????????????????????</p>
+        <a class="button button-primary" href="${project.repo}" target="_blank" rel="noreferrer">???? <i data-lucide="github"></i></a>
       </div>
       <aside class="detail-aside">
-        <h3>working notes</h3>
+        <h3>????</h3>
         <ul>${project.details.map((detail) => `<li>${detail}</li>`).join("")}</ul>
-        <a class="text-link" href="${project.repo}" target="_blank" rel="noreferrer">read the source <i data-lucide="arrow-up-right"></i></a>
+        <a class="text-link" href="${project.repo}" target="_blank" rel="noreferrer">???? <i data-lucide="arrow-up-right"></i></a>
       </aside>
     </div>
   `;
