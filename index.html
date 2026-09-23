@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Huang Fengfan's embedded systems and robotics portfolio." />
+    <meta name="theme-color" content="#0b1013" />
+    <title>HereOvO / Embedded Systems & Robotics</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="HereOvO home">
+          <span class="brand-mark">H<span>/</span>O</span>
+          <span class="brand-copy">
+            <strong>HereOvO</strong>
+            <small>embedded systems / robotics</small>
+          </span>
+        </a>
+        <button class="menu-toggle icon-button" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a class="active" href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#notes">Notes</a>
+          <a href="#contact">Contact</a>
+          <button class="theme-toggle icon-button" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+            <i data-lucide="sun-moon"></i>
+          </button>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero section-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot"></span> available for interesting problems</p>
+            <h1>Hardware that<br /><em>moves.</em> Firmware<br />that holds up.</h1>
+            <p class="hero-lede">
+              I'm Huang Fengfan, an undergraduate engineer at Hohai University building embedded controllers,
+              upgrade paths, and robots that behave in the real world.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">Explore selected work <i data-lucide="arrow-down-right"></i></a>
+              <a class="text-link" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">Open GitHub <i data-lucide="arrow-up-right"></i></a>
+            </div>
+            <div class="hero-meta">
+              <span><b>01</b> firmware</span>
+              <span><b>02</b> control</span>
+              <span><b>03</b> robotics</span>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Illustration of an embedded robotics workbench">
+            <div class="visual-label visual-label-top">LAB / 2026</div>
+            <div class="visual-label visual-label-bottom">signal stable <span></span></div>
+            <img src="assets/hero.svg" alt="Technical illustration of a microcontroller board and wheeled robot chassis" />
+          </div>
+        </section>
+
+        <section class="signal-strip" aria-label="Current focus">
+          <div class="signal-item"><span class="signal-index">01</span><span>STM32 firmware</span></div>
+          <div class="signal-item"><span class="signal-index">02</span><span>motor control</span></div>
+          <div class="signal-item"><span class="signal-index">03</span><span>remote upgrade</span></div>
+          <div class="signal-item"><span class="signal-index">04</span><span>robot platforms</span></div>
+          <div class="signal-item signal-item-muted"><span>NANJING / CHINA</span></div>
+        </section>
+
+        <section class="work-section page-section" id="work">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">selected work</p>
+              <h2>Projects with a pulse.</h2>
+            </div>
+            <p class="section-intro">A working archive of controllers, tools, and experiments. Every project starts at the bench and ends in a testable behavior.</p>
+          </div>
+          <div class="filter-row" role="group" aria-label="Filter projects">
+            <button class="filter-button is-active" type="button" data-filter="all">All <span>05</span></button>
+            <button class="filter-button" type="button" data-filter="robotics">Robotics <span>02</span></button>
+            <button class="filter-button" type="button" data-filter="firmware">Firmware <span>02</span></button>
+            <button class="filter-button" type="button" data-filter="tools">Tools <span>01</span></button>
+          </div>
+          <div class="project-grid" id="project-grid"></div>
+          <div class="section-tail">
+            <a class="text-link" href="https://github.com/HereOvO?tab=repositories" target="_blank" rel="noreferrer">View all repositories <i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </section>
+
+        <section class="about-section page-section" id="about">
+          <div class="about-panel">
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">about / 00</p>
+                <h2>Make the signal<br /><em>survive.</em></h2>
+              </div>
+              <p class="section-intro">My work sits between clean abstractions and imperfect hardware: the place where timing, noise, power, and mechanics all become part of the software.</p>
+            </div>
+            <div class="about-grid">
+              <div class="about-statement">
+                <p>I'm a student engineer focused on the parts of a system that must keep working after the demo: boot flows, communication protocols, motor response, recovery paths, and the small tools that make debugging faster.</p>
+                <a class="button button-dark" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">See the source <i data-lucide="github"></i></a>
+              </div>
+              <div class="stats-grid">
+                <div class="stat"><strong>10</strong><span>public repositories</span></div>
+                <div class="stat"><strong>4</strong><span>hardware directions</span></div>
+                <div class="stat"><strong>1</strong><span>long-term goal: better robots</span></div>
+                <div class="stat"><strong>many</strong><span>bench iterations</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-year">now</span>
+              <div><h3>Building reliable control layers</h3><p>Motor control, remote firmware upgrade, and platform integration for small robotic systems.</p></div>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2025</span>
+              <div><h3>Competition systems</h3><p>Line inspection and target shooting project with real-time sensing and actuation constraints.</p></div>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">next</span>
+              <div><h3>More field tests</h3><p>Turning prototype notes into clearer documentation, reusable modules, and repeatable experiments.</p></div>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </div>
+        </section>
+
+        <section class="notes-section page-section" id="notes">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">bench notes</p>
+              <h2>Things I'm tracing.</h2>
+            </div>
+            <p class="section-intro">Short technical notes will live here as the work becomes clearer. For now, the repository history is the most honest log.</p>
+          </div>
+          <div class="note-list">
+            <a class="note-row" href="https://github.com/HereOvO/STM32-remote-upgrade" target="_blank" rel="noreferrer">
+              <span class="note-number">01</span><span class="note-title">What makes an OTA path recoverable?</span><span class="note-tag">upgrade</span><i data-lucide="arrow-up-right"></i>
+            </a>
+            <a class="note-row" href="https://github.com/HereOvO/chassis-motor-control" target="_blank" rel="noreferrer">
+              <span class="note-number">02</span><span class="note-title">Four motors, one chassis, fewer surprises</span><span class="note-tag">control</span><i data-lucide="arrow-up-right"></i>
+            </a>
+            <a class="note-row" href="https://github.com/HereOvO/Single-USB-burning-for-AB-partition" target="_blank" rel="noreferrer">
+              <span class="note-number">03</span><span class="note-title">A single USB path for A/B partitions</span><span class="note-tag">firmware</span><i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </section>
+
+        <section class="contact-section page-section" id="contact">
+          <div class="contact-inner">
+            <p class="eyebrow">contact / 04</p>
+            <h2>Have a system<br /><em>worth testing?</em></h2>
+            <p>Open an issue, start a discussion, or find me on GitHub. I'm interested in embedded systems that need to become more understandable, more robust, and more useful.</p>
+            <a class="button button-primary" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">Start at GitHub <i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>(c) <span id="year"></span> Huang Fengfan / HereOvO</span>
+        <span>built close to the hardware</span>
+        <a href="#top">back to top <i data-lucide="arrow-up"></i></a>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
