@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Huang Fengfan / HereOvO — Embedded Systems & Robotics</title>
+    <meta
+      name="description"
+      content="Huang Fengfan (HereOvO), undergraduate in Automation at Hohai University. Embedded hardware and firmware, robotics systems: STM32, FreeRTOS, bootloader and OTA, motor control, ROS and RK3568."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://hereovo.github.io/en/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://hereovo.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://hereovo.github.io/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://hereovo.github.io/" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Huang Fengfan / HereOvO — Embedded Systems & Robotics" />
+    <meta
+      property="og:description"
+      content="Hohai University Automation, class of 2024. Embedded hardware, firmware and robotics: inspection robot, STM32 bootloader with A/B OTA, wheeled-leg robot controller."
+    />
+    <meta property="og:url" content="https://hereovo.github.io/en/" />
+    <meta property="og:image" content="https://hereovo.github.io/assets/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://hereovo.github.io/assets/og-cover.png" />
+
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Huang Fengfan",
+        "alternateName": "HereOvO",
+        "url": "https://hereovo.github.io/en/",
+        "email": "mailto:2676896398@qq.com",
+        "jobTitle": "Embedded Systems Engineer",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Hohai University"
+        },
+        "sameAs": ["https://github.com/HereOvO"],
+        "knowsAbout": [
+          "Embedded Systems",
+          "STM32",
+          "FreeRTOS",
+          "Bootloader",
+          "OTA",
+          "Motor Control",
+          "PCB Design",
+          "ROS",
+          "RK3568"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="topbar-brand" href="#top">
+          <span class="brand-mark">HO</span>
+          <span class="brand-name">Huang Fengfan</span>
+          <span class="brand-handle">HereOvO</span>
+        </a>
+        <nav class="topnav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#awards">Awards</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#index">Repos</a>
+          <a class="topnav-github" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">GitHub<span aria-hidden="true"> ↗</span></a>
+          <a class="topnav-lang" href="../" hreflang="zh-CN" lang="zh-CN">中文</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="profile" id="top">
+        <div class="avatar avatar-mark" role="img" aria-label="Huang Fengfan monogram">HO</div>
+        <h1>Huang Fengfan <span class="h1-en">黄丰帆</span></h1>
+        <p class="handle">@HereOvO</p>
+        <p class="tagline">
+          Hohai University · Automation · Class of 2024<br />
+          Embedded hardware &amp; firmware / Board-level drivers / Robotics
+        </p>
+        <div class="profile-links">
+          <a class="pill" href="mailto:2676896398@qq.com">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.75 2h12.5c.97 0 1.75.78 1.75 1.75v8.5c0 .97-.78 1.75-1.75 1.75H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.78.78 2 1.75 2Zm0 1.5a.25.25 0 0 0-.25.25v.28l6.5 3.9 6.5-3.9v-.28a.25.25 0 0 0-.25-.25ZM14.5 5.55 8 9.45l-6.5-3.9v6.7c0 .14.11.25.25.25h12.5a.25.25 0 0 0 .25-.25v-6.7Z"/></svg>
+            2676896398@qq.com
+          </a>
+          <a class="pill" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            github.com/HereOvO
+          </a>
+          <span class="pill pill-static">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a5.53 5.53 0 0 0-5.53 5.53c0 3.9 4.86 9.68 5.06 9.93a.62.62 0 0 0 .94 0c.2-.25 5.06-6.03 5.06-9.93A5.53 5.53 0 0 0 8 0Zm0 7.9a2.37 2.37 0 1 1 0-4.74 2.37 2.37 0 0 1 0 4.74Z"/></svg>
+            Nanjing, China
+          </span>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-head">
+          <h2>About</h2>
+          <span class="section-en">简介</span>
+        </div>
+        <p class="lede">
+          I build embedded hardware, firmware and robotics systems. I care about the parts that still have to work
+          after the demo: boot and update paths, closed-loop motor control, board-level drivers, communication
+          protocols, and the tooling that makes debugging faster.
+        </p>
+        <div class="facts">
+          <div class="fact">
+            <span class="fact-label">Education</span>
+            <span class="fact-value">Hohai University (Project 211) · Automation · B.Eng. · 2024.09 – 2028.06</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Target roles</span>
+            <span class="fact-value">Embedded hardware &amp; software · Embedded software engineer · Board-level driver development</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Stack</span>
+            <span class="fact-value">C/C++ · Python · STM32 · FreeRTOS · Linux · ROS · PCB</span>
+          </div>
+        </div>
+        <ul class="strengths">
+          <li><strong>Full-stack embedded:</strong> schematic and PCB design, low-level drivers, firmware, communication protocols, host software, system integration and debugging end to end.</li>
+          <li><strong>Engineering discipline:</strong> validation mechanisms, fault protection, timeout handling, versioning, portability and reuse built into every project.</li>
+          <li><strong>Teamwork:</strong> led teams to national awards; comfortable with technology selection, task breakdown, schedule control and cross-module coordination.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="work">
+        <div class="section-head">
+          <h2>Featured Work</h2>
+          <span class="section-en">代表性项目</span>
+        </div>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Smart Industrial Inspection Robot</h3>
+            <span class="status status-done">Prototype complete</span>
+          </div>
+          <p class="project-en">STM32 + RK3568 mobile inspection platform · ROS navigation</p>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Team lead · Power design · Chassis firmware · Integration</dd></div>
+            <div><dt>Period</dt><dd>2026.04 – 2026.08</dd></div>
+            <div><dt>Stack</dt><dd>STM32F407 · FreeRTOS · TB67H451FNG · RK3568 · ROS</dd></div>
+          </dl>
+          <ul class="project-points">
+            <li>Designed the whole-vehicle power chain (intake, step-down, distribution) plus the motor driver board, STM32 core board and power control board: schematics and PCB with reverse-polarity protection, overvoltage protection, soft start, and power/signal isolation.</li>
+            <li>Built four-channel motor drive with TB67H451FNG including current sensing, stall protection and current limiting; a 1 ms FreeRTOS control task with four encoder channels, four PWM outputs, 50 Hz odometry and 100 Hz PID + feed-forward closed-loop control.</li>
+            <li>Wrote a binary protocol with CRC, watchdog and link-loss protection; integrated SLAM, AMCL, move_base navigation and RKNN visual recognition alerts on RK3568, connecting mapping, navigation, detection, alarming and remote supervision into one flow.</li>
+          </ul>
+          <p class="project-links">
+            <span class="note">Project code is not public; chassis firmware:</span>
+            <a href="https://github.com/HereOvO/chassis-motor-control" target="_blank" rel="noreferrer">chassis-motor-control<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>STM32F407 Bootloader &amp; A/B OTA</h3>
+            <span class="status status-done">Stable</span>
+          </div>
+          <p class="project-en">Dual-bank bootloader with USB CDC firmware update · STM32F407</p>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Independent development</dd></div>
+            <div><dt>Period</dt><dd>2026.01 – 2026.02</dd></div>
+            <div><dt>Stack</dt><dd>STM32F407 · Bootloader · USB CDC · CRC32 · ESP32-S3</dd></div>
+          </dl>
+          <ul class="project-points">
+            <li>Built a custom firmware transfer protocol over USB CDC: packet reception, ordered buffering, partition writes, status feedback and error responses, with CRC32 integrity checks.</li>
+            <li>Implemented on-demand sector erase by checking sector state, reducing Flash wear; designed a seven-stage state machine covering wait, erase, receive, write, verify, jump and recovery.</li>
+            <li>Added receive timeout, watchdog reset and write-error detection with automatic rollback on failure; handled Flash address offset, vector table relocation, stack initialization and stable jump to the application. Recorded upgrade success rate: 100%.</li>
+          </ul>
+          <p class="project-links">
+            <a href="https://github.com/HereOvO/Single-USB-burning-for-AB-partition" target="_blank" rel="noreferrer">Single-USB-burning-for-AB-partition<span aria-hidden="true"> ↗</span></a>
+            <a href="https://github.com/HereOvO/STM32-remote-upgrade" target="_blank" rel="noreferrer">STM32-remote-upgrade<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Wheeled-Leg Robot Controller</h3>
+            <span class="status status-done">Completed</span>
+          </div>
+          <p class="project-en">Multi-function controller with FreeRTOS real-time control</p>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Independent development</dd></div>
+            <div><dt>Period</dt><dd>2026.01 – 2026.02</dd></div>
+            <div><dt>Stack</dt><dd>STM32F407 · FreeRTOS · MPU6050 · PCA9685 · UART</dd></div>
+          </dl>
+          <ul class="project-points">
+            <li>Concurrent IMU, motor, servo and serial tasks on FreeRTOS.</li>
+            <li>Drove MPU6050 / PCA9685 for 16-channel servo control, used four timers for encoder speed measurement and closed-loop motor control, and exposed 100 Hz UART status reporting.</li>
+            <li>Delivered high-rate coordination across multiple sensors and actuators, keeping the platform stable and responsive.</li>
+          </ul>
+          <p class="project-links">
+            <a href="https://github.com/HereOvO/wheeled-leg-robot" target="_blank" rel="noreferrer">wheeled-leg-robot<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </article>
+
+        <div class="section-subhead">
+          <h3>More projects</h3>
+        </div>
+        <div class="card-grid">
+          <a class="mini-card" href="https://github.com/HereOvO/Line-inspection-and-target-shooting" target="_blank" rel="noreferrer">
+            <h4>Line-following &amp; target-shooting robot</h4>
+            <p>2025 electronics design contest: line detection, target recognition and timed actuator state transitions.</p>
+            <span class="mini-tags">STM32 · real-time I/O · state machine</span>
+          </a>
+          <a class="mini-card" href="https://github.com/HereOvO/Desktop-wallpaper-display" target="_blank" rel="noreferrer">
+            <h4>Desktop wallpaper display</h4>
+            <p>ESP32-S3 receives images over Wi-Fi, sends them over USB CDC to an STM32F407 that displays them and writes to SD.</p>
+            <span class="mini-tags">ESP32-S3 · STM32F407 · ILI9341 · SD</span>
+          </a>
+          <a class="mini-card" href="https://github.com/HereOvO/2Dpan-tilt-on-car" target="_blank" rel="noreferrer">
+            <h4>2D pan-tilt driver</h4>
+            <p>Dual-servo pan-tilt on STM32 with ~100 Hz closed-loop tracking, USB CDC binary protocol and online tuning.</p>
+            <span class="mini-tags">STM32F407 · USB CDC · servos</span>
+          </a>
+          <a class="mini-card" href="https://github.com/HereOvO/PWM-Gennerator" target="_blank" rel="noreferrer">
+            <h4>PWM generator</h4>
+            <p>STM32F103 with a PySide6 host tool for dynamic 7-channel PWM frequency and duty-cycle control.</p>
+            <span class="mini-tags">STM32F103 · USB CDC · PySide6</span>
+          </a>
+          <a class="mini-card" href="https://github.com/HereOvO/RemoteProgramming" target="_blank" rel="noreferrer">
+            <h4>Remote flashing</h4>
+            <p>Two-MCU remote flashing setup with wiring notes and status handshaking.</p>
+            <span class="mini-tags">STM32 · flashing · communication</span>
+          </a>
+          <a class="mini-card" href="https://github.com/HereOvO/SystemViewPreConfig" target="_blank" rel="noreferrer">
+            <h4>SystemView porting config</h4>
+            <p>Pre-configuration and version notes for FreeRTOS + SEGGER SystemView.</p>
+            <span class="mini-tags">FreeRTOS · SystemView · debugging</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <span class="section-en">专业技能</span>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-group">
+            <h3>Programming &amp; tools</h3>
+            <div class="chips chips-dark">
+              <span class="tag">C / C++</span>
+              <span class="tag">Python</span>
+              <span class="tag">Keil MDK</span>
+              <span class="tag">STM32CubeMX</span>
+              <span class="tag">CubeProgrammer</span>
+              <span class="tag">PlatformIO</span>
+              <span class="tag">VSCode</span>
+              <span class="tag">Git</span>
+              <span class="tag">Serial debug</span>
+              <span class="tag">Oscilloscope</span>
+              <span class="tag">Logic analyzer</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>MCU &amp; RTOS</h3>
+            <div class="chips chips-dark">
+              <span class="tag">STM32</span>
+              <span class="tag">STM32F103</span>
+              <span class="tag">ESP32 / ESP32-S3</span>
+              <span class="tag">HAL</span>
+              <span class="tag">FreeRTOS</span>
+              <span class="tag">UART</span>
+              <span class="tag">I2C</span>
+              <span class="tag">SPI</span>
+              <span class="tag">USB CDC</span>
+              <span class="tag">PWM</span>
+              <span class="tag">Encoders</span>
+              <span class="tag">PID / feed-forward</span>
+              <span class="tag">Attitude estimation</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Hardware design &amp; debug</h3>
+            <div class="chips chips-dark">
+              <span class="tag">Schematics</span>
+              <span class="tag">PCB</span>
+              <span class="tag">Altium Designer</span>
+              <span class="tag">EasyEDA</span>
+              <span class="tag">Component selection</span>
+              <span class="tag">Power tree</span>
+              <span class="tag">Buck / LDO</span>
+              <span class="tag">Isolation</span>
+              <span class="tag">Motor drivers</span>
+              <span class="tag">Board bring-up</span>
+              <span class="tag">SolidWorks / Fusion 360</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Low-level firmware &amp; Linux</h3>
+            <div class="chips chips-dark">
+              <span class="tag">Bootloader</span>
+              <span class="tag">Flash</span>
+              <span class="tag">CRC32</span>
+              <span class="tag">A/B partitions</span>
+              <span class="tag">Watchdog</span>
+              <span class="tag">Vector table relocation</span>
+              <span class="tag">Shell</span>
+              <span class="tag">Processes / threads</span>
+              <span class="tag">Char devices</span>
+              <span class="tag">Platform / device tree</span>
+              <span class="tag">GPIO/I2C/SPI/UART drivers</span>
+              <span class="tag">Embedded Linux (IMX6ULL)</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Robotics &amp; system integration</h3>
+            <div class="chips chips-dark">
+              <span class="tag">ROS Noetic</span>
+              <span class="tag">SLAM</span>
+              <span class="tag">AMCL</span>
+              <span class="tag">move_base</span>
+              <span class="tag">RK3568</span>
+              <span class="tag">RKNN</span>
+              <span class="tag">HTTP API</span>
+              <span class="tag">Python host tools</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="awards">
+        <div class="section-head">
+          <h2>Awards</h2>
+          <span class="section-en">竞赛成果</span>
+        </div>
+        <ul class="award-list">
+          <li class="award">
+            <span class="award-year">2025</span>
+            <div class="award-body">
+              <h3>National College Student Algorithm Elite Competition · Smart Community track</h3>
+              <p>National First Prize</p>
+            </div>
+            <span class="award-level">National 1st</span>
+          </li>
+          <li class="award">
+            <span class="award-year">2026</span>
+            <div class="award-body">
+              <h3>National College Student IoT Design Competition · Quectel track</h3>
+              <p>National Second Prize</p>
+            </div>
+            <span class="award-level">National 2nd</span>
+          </li>
+          <li class="award">
+            <span class="award-year">2026</span>
+            <div class="award-body">
+              <h3>China College Student Service Outsourcing Innovation &amp; Entrepreneurship Competition · Corporate track</h3>
+              <p>National Third Prize</p>
+            </div>
+            <span class="award-level">National 3rd</span>
+          </li>
+          <li class="award">
+            <span class="award-year">2026</span>
+            <div class="award-body">
+              <h3>National College Student Embedded Chip &amp; System Design Competition · Quectel track</h3>
+              <p>National Third Prize</p>
+            </div>
+            <span class="award-level">National 3rd</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="timeline">
+        <div class="section-head">
+          <h2>Timeline</h2>
+          <span class="section-en">项目与竞赛经历</span>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span class="timeline-date">2024.09</span>
+            <div class="timeline-body">
+              <h3>Started B.Eng. in Automation at Hohai University</h3>
+              <p>Began systematic embedded and hardware work; the focus gradually moved to firmware, motor control and robotics.</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">2025</span>
+            <div class="timeline-body">
+              <h3>National Undergraduate Electronics Design Contest · line following and target shooting</h3>
+              <p>Integrated real-time sensing, state transitions and actuators into one competition system.</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">2026.01 – 02</span>
+            <div class="timeline-body">
+              <h3>Firmware deep dive: Bootloader / A-B OTA and wheeled-leg robot controller</h3>
+              <p>Two low-level firmware projects around reliable updates and real-time control, forming a reusable engineering workflow.</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">2026.04 – 08</span>
+            <div class="timeline-body">
+              <h3>Smart industrial inspection robot (team lead)</h3>
+              <p>Owned power and board design, STM32 chassis firmware and system integration, working with the RK3568 navigation and vision side.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section" id="index">
+        <div class="section-head">
+          <h2>Repositories</h2>
+          <span class="section-en">项目索引</span>
+        </div>
+        <div class="table-wrap">
+          <table class="repo-table">
+            <thead>
+              <tr>
+                <th scope="col">Repository</th>
+                <th scope="col">Area</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://github.com/HereOvO/chassis-motor-control" target="_blank" rel="noreferrer">chassis-motor-control</a></td>
+                <td>Firmware</td>
+                <td>STM32F407 four-motor chassis firmware: FreeRTOS, odometry, PID + feed-forward</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/Single-USB-burning-for-AB-partition" target="_blank" rel="noreferrer">Single-USB-burning-for-AB-partition</a></td>
+                <td>Firmware</td>
+                <td>Dual-bank bootloader and single-USB flashing flow for STM32F407</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/STM32-remote-upgrade" target="_blank" rel="noreferrer">STM32-remote-upgrade</a></td>
+                <td>Firmware</td>
+                <td>Remote firmware update with an ESP32-S3 OTA host</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/wheeled-leg-robot" target="_blank" rel="noreferrer">wheeled-leg-robot</a></td>
+                <td>Control</td>
+                <td>Multi-function wheeled-leg controller: IMU, servos, motors and serial tasks</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/2Dpan-tilt-on-car" target="_blank" rel="noreferrer">2Dpan-tilt-on-car</a></td>
+                <td>Control</td>
+                <td>2D pan-tilt driver with USB CDC protocol and ~100 Hz closed-loop tracking</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/Line-inspection-and-target-shooting" target="_blank" rel="noreferrer">Line-inspection-and-target-shooting</a></td>
+                <td>Contest</td>
+                <td>2025 electronics design contest line-following and target-shooting robot</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/Desktop-wallpaper-display" target="_blank" rel="noreferrer">Desktop-wallpaper-display</a></td>
+                <td>Hardware</td>
+                <td>ESP32-S3 + STM32F407 + ILI9341 desktop wallpaper display</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/PWM-Gennerator" target="_blank" rel="noreferrer">PWM-Gennerator</a></td>
+                <td>Tooling</td>
+                <td>STM32F103 PWM generator with a PySide6 host application</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/RemoteProgramming" target="_blank" rel="noreferrer">RemoteProgramming</a></td>
+                <td>Tooling</td>
+                <td>Two-MCU remote flashing setup</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/SystemViewPreConfig" target="_blank" rel="noreferrer">SystemViewPreConfig</a></td>
+                <td>Tooling</td>
+                <td>FreeRTOS + SEGGER SystemView porting configuration</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/26fwwb-code" target="_blank" rel="noreferrer">26fwwb-code</a></td>
+                <td>Contest</td>
+                <td>2026 Service Outsourcing Innovation &amp; Entrepreneurship Competition code</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/IMX6ULL-Learn" target="_blank" rel="noreferrer">IMX6ULL-Learn</a></td>
+                <td>Learning</td>
+                <td>IMX6ULL embedded Linux study notes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-tail">
+          <a class="text-link" href="https://github.com/HereOvO?tab=repositories" target="_blank" rel="noreferrer">All repositories on GitHub<span aria-hidden="true"> ↗</span></a>
+        </p>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <span class="section-en">联系</span>
+        </div>
+        <p class="lede">
+          If you are working on embedded systems, firmware updates, motor control or small robotics platforms, feel
+          free to reach out by email or GitHub.
+        </p>
+        <div class="contact-row">
+          <a class="button" href="mailto:2676896398@qq.com">Send email</a>
+          <a class="button button-ghost" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">GitHub<span aria-hidden="true"> ↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year">2026</span> Huang Fengfan · HereOvO</span>
+      <span class="footer-note">Embedded systems / firmware / robotics</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

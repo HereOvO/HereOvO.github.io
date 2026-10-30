@@ -3,213 +3,527 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="HereOvO 的嵌入式系统、固件与机器人项目主页。" />
-    <meta name="theme-color" content="#0b1013" />
-    <title>HereOvO / 嵌入式与机器人</title>
+    <title>黄丰帆 / HereOvO — 嵌入式软硬件与机器人系统</title>
+    <meta
+      name="description"
+      content="黄丰帆（HereOvO），河海大学自动化专业本科生，方向为嵌入式软硬件、固件与机器人系统：STM32、FreeRTOS、Bootloader 与 OTA、电机控制、ROS 与 RK3568。"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://hereovo.github.io/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://hereovo.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://hereovo.github.io/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://hereovo.github.io/" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="黄丰帆 / HereOvO — 嵌入式软硬件与机器人系统" />
+    <meta
+      property="og:description"
+      content="河海大学自动化 2024 级｜嵌入式软硬件、固件与机器人系统。项目：智能安防巡检机器人、STM32 Bootloader 与 A/B 分区 OTA、轮腿机器人控制器。"
+    />
+    <meta property="og:url" content="https://hereovo.github.io/" />
+    <meta property="og:image" content="https://hereovo.github.io/assets/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://hereovo.github.io/assets/og-cover.png" />
+
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "黄丰帆",
+        "alternateName": "HereOvO",
+        "url": "https://hereovo.github.io/",
+        "email": "mailto:2676896398@qq.com",
+        "jobTitle": "嵌入式软硬件开发",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "河海大学"
+        },
+        "sameAs": ["https://github.com/HereOvO"],
+        "knowsAbout": [
+          "Embedded Systems",
+          "STM32",
+          "FreeRTOS",
+          "Bootloader",
+          "OTA",
+          "Motor Control",
+          "PCB Design",
+          "ROS",
+          "RK3568"
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div class="site-shell">
-      <header class="site-header">
-        <a class="brand" href="#top" aria-label="HereOvO 主页">
-          <span class="brand-mark">H<span>/</span>O</span>
-          <span class="brand-copy">
-            <strong>HereOvO</strong>
-            <small>嵌入式 / 机器人</small>
-          </span>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="topbar-brand" href="#top">
+          <span class="brand-mark">HO</span>
+          <span class="brand-name">黄丰帆</span>
+          <span class="brand-handle">HereOvO</span>
         </a>
-        <button class="menu-toggle icon-button" type="button" aria-label="展开导航" aria-expanded="false">
-          <i data-lucide="menu"></i>
-        </button>
-        <nav class="site-nav" aria-label="主导航">
-          <a class="active" href="#work">项目</a>
-          <a href="#awards">获奖</a>
-          <a href="#about">关于</a>
-          <a href="#notes">笔记</a>
-          <a href="#contact">联系</a>
-          <button class="theme-toggle icon-button" type="button" aria-label="切换颜色主题" title="切换颜色主题">
-            <i data-lucide="sun-moon"></i>
-          </button>
+        <nav class="topnav" aria-label="主导航">
+          <a href="#about">简介</a>
+          <a href="#work">项目</a>
+          <a href="#skills">技能</a>
+          <a href="#awards">奖项</a>
+          <a href="#timeline">经历</a>
+          <a href="#index">仓库</a>
+          <a class="topnav-github" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">GitHub<span aria-hidden="true"> ↗</span></a>
+          <a class="topnav-lang" href="en/" hreflang="en" lang="en">EN</a>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <main id="top">
-        <section class="hero section-grid">
-          <div class="hero-copy">
-            <p class="eyebrow"><span class="status-dot"></span> 正在做有意思的嵌入式问题</p>
-            <h1>让硬件动起来。<br /><em>让固件靠得住。</em></h1>
-            <p class="hero-lede">
-              我是 HereOvO，河海大学本科生。关注 STM32、ESP32、运动控制、远程升级和小型机器人系统，把想法做成能稳定运行的原型。
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#work">查看项目 <i data-lucide="arrow-down-right"></i></a>
-              <a class="text-link" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">打开 GitHub <i data-lucide="arrow-up-right"></i></a>
-            </div>
-            <div class="hero-meta">
-              <span><b>01</b> 固件</span>
-              <span><b>02</b> 控制</span>
-              <span><b>03</b> 机器人</span>
-            </div>
-          </div>
-          <div class="hero-visual" aria-label="嵌入式系统状态面板">
-            <div class="visual-label visual-label-top">实验室 / 南京</div>
-            <div class="visual-label visual-label-bottom">信号稳定 <span></span></div>
-            <div class="panel-board">
-              <div class="panel-header">
-                <span>控制栈</span>
-                <strong>在线</strong>
-              </div>
-              <div class="trace-grid">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="chip chip-main">
-                <small>主控</small>
-                <strong>STM32</strong>
-              </div>
-              <div class="chip chip-side">
-                <small>通信</small>
-                <strong>ESP32-S3</strong>
-              </div>
-              <div class="signal-line signal-line-a"></div>
-              <div class="signal-line signal-line-b"></div>
-              <div class="motor-row">
-                <span>电机 A</span>
-                <span>电机 B</span>
-                <span>编码器</span>
-              </div>
-              <div class="terminal">
-                <p>&gt; 启动检查：正常</p>
-                <p>&gt; 串口链路：稳定</p>
-                <p>&gt; 控制循环：运行中</p>
-              </div>
-            </div>
-          </div>
-        </section>
+    <main id="main">
+      <!-- 个人资料 -->
+      <section class="profile" id="top">
+        <div class="avatar avatar-mark" role="img" aria-label="黄丰帆（HereOvO）的字母标">HO</div>
+        <h1>黄丰帆 <span class="h1-en">Huang Fengfan</span></h1>
+        <p class="handle">@HereOvO</p>
+        <p class="tagline">
+          河海大学 · 自动化 · 2024 级<br />
+          嵌入式软硬件 / 固件 / 板级驱动 / 机器人系统
+        </p>
+        <div class="profile-links">
+          <a class="pill" href="mailto:2676896398@qq.com">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.75 2h12.5c.97 0 1.75.78 1.75 1.75v8.5c0 .97-.78 1.75-1.75 1.75H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.78.78 2 1.75 2Zm0 1.5a.25.25 0 0 0-.25.25v.28l6.5 3.9 6.5-3.9v-.28a.25.25 0 0 0-.25-.25ZM14.5 5.55 8 9.45l-6.5-3.9v6.7c0 .14.11.25.25.25h12.5a.25.25 0 0 0 .25-.25v-6.7Z"/></svg>
+            2676896398@qq.com
+          </a>
+          <a class="pill" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            github.com/HereOvO
+          </a>
+          <span class="pill pill-static">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a5.53 5.53 0 0 0-5.53 5.53c0 3.9 4.86 9.68 5.06 9.93a.62.62 0 0 0 .94 0c.2-.25 5.06-6.03 5.06-9.93A5.53 5.53 0 0 0 8 0Zm0 7.9a2.37 2.37 0 1 1 0-4.74 2.37 2.37 0 0 1 0 4.74Z"/></svg>
+            南京 · 中国
+          </span>
+        </div>
+      </section>
 
-        <section class="signal-strip" aria-label="当前关注方向">
-          <div class="signal-item"><span class="signal-index">01</span><span>STM32 固件</span></div>
-          <div class="signal-item"><span class="signal-index">02</span><span>电机控制</span></div>
-          <div class="signal-item"><span class="signal-index">03</span><span>远程升级</span></div>
-          <div class="signal-item"><span class="signal-index">04</span><span>机器人平台</span></div>
-          <div class="signal-item signal-item-muted"><span>南京 / 中国</span></div>
-        </section>
+      <!-- 简介 -->
+      <section class="section" id="about">
+        <div class="section-head">
+          <h2>简介</h2>
+          <span class="section-en">About</span>
+        </div>
+        <p class="lede">
+          做嵌入式软硬件与机器人系统。习惯把系统里「演示结束后仍然必须稳定工作」的部分做扎实：启动与升级流程、电机闭环控制、板级驱动、通信协议，以及能把调试变快的工具。
+        </p>
+        <div class="facts">
+          <div class="fact">
+            <span class="fact-label">教育经历</span>
+            <span class="fact-value">河海大学（211）· 自动化 · 本科 · 2024.09 – 2028.06</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">意向方向</span>
+            <span class="fact-value">嵌入式软硬件开发 · 嵌入式软件工程师 · 板级驱动开发</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">技术栈</span>
+            <span class="fact-value">C/C++ · Python · STM32 · FreeRTOS · Linux · ROS · PCB</span>
+          </div>
+        </div>
+        <ul class="strengths">
+          <li><strong>嵌入式全栈：</strong>可独立完成原理图设计、PCB 绘制、底层驱动、固件开发、通信协议、上位机与系统联调、问题排查与交付全流程。</li>
+          <li><strong>工程化思维：</strong>项目按工程标准落地，具备校验机制、异常保护、超时容错、版本管理与移植复用能力。</li>
+          <li><strong>团队协作：</strong>多次作为队长带队拿国奖，擅长技术选型、任务拆分、进度把控与跨模块协作。</li>
+        </ul>
+      </section>
 
-        <section class="work-section page-section" id="work">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">精选项目</p>
-              <h2>从硬件到可验证行为。</h2>
-            </div>
-            <p class="section-intro">这里整理的是控制器、工具链和原型实验。每个项目都尽量留下清楚的目标、边界和后续改进空间。</p>
-          </div>
-          <div class="filter-row" role="group" aria-label="筛选项目">
-            <button class="filter-button is-active" type="button" data-filter="all">全部 <span>05</span></button>
-            <button class="filter-button" type="button" data-filter="robotics">机器人 <span>02</span></button>
-            <button class="filter-button" type="button" data-filter="firmware">固件 <span>02</span></button>
-            <button class="filter-button" type="button" data-filter="tools">工具 <span>01</span></button>
-          </div>
-          <div class="project-grid" id="project-grid"></div>
-          <div class="section-tail">
-            <a class="text-link" href="https://github.com/HereOvO?tab=repositories" target="_blank" rel="noreferrer">查看全部仓库 <i data-lucide="arrow-up-right"></i></a>
-          </div>
-        </section>
+      <!-- 代表项目 -->
+      <section class="section" id="work">
+        <div class="section-head">
+          <h2>代表性项目</h2>
+          <span class="section-en">Featured Work</span>
+        </div>
 
-        <section class="awards-section page-section" id="awards">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">国家级奖项</p>
-              <h2>把结果留下来。</h2>
-            </div>
-            <p class="section-intro">只整理国家级赛事获奖信息。证书原件不上传到公开网站，仅保留奖项与赛事记录。</p>
+        <article class="project">
+          <div class="project-head">
+            <h3>智能安防工业巡检机器人系统</h3>
+            <span class="status status-done">已完成原型</span>
           </div>
-          <div class="award-grid" id="award-grid"></div>
-        </section>
+          <p class="project-en">Smart community / industrial inspection robot · STM32 + RK3568</p>
+          <dl class="project-meta">
+            <div><dt>角色</dt><dd>项目队长 · 供电设计 · 底盘固件 · 整机联调</dd></div>
+            <div><dt>时间</dt><dd>2026.04 – 2026.08</dd></div>
+            <div><dt>技术栈</dt><dd>STM32F407 · FreeRTOS · TB67H451FNG · RK3568 · ROS</dd></div>
+          </dl>
+          <ul class="project-points">
+            <li>独立完成整车取电、降压、分电方案，以及电机驱动板、STM32 核心板、电源控制板原理图与 PCB；设计防反接、过压保护、软启动、电源隔离与信号隔离。</li>
+            <li>基于 TB67H451FNG 实现四路电机驱动、电流采样、堵转保护与限流；基于 FreeRTOS 搭建 1ms 主控任务，完成四路编码器采集、四路 PWM 输出、50Hz 里程计与 100Hz PID + 前馈闭环控制。</li>
+            <li>自研带 CRC、看门狗与断连保护的二进制通信协议；在 RK3568 上集成 SLAM、AMCL、move_base 自主导航与 RKNN 视觉识别告警，打通建图、导航、识别、告警与远程管控全流程。</li>
+          </ul>
+          <p class="project-links">
+            <span class="note">项目代码未公开，底盘固件见</span>
+            <a href="https://github.com/HereOvO/chassis-motor-control" target="_blank" rel="noreferrer">chassis-motor-control<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </article>
 
-        <section class="about-section page-section" id="about">
-          <div class="about-panel">
-            <div class="section-heading compact">
-              <div>
-                <p class="eyebrow">关于 / 00</p>
-                <h2>把信号留住，<br /><em>把系统跑稳。</em></h2>
-              </div>
-              <p class="section-intro">我喜欢处在软件和硬件交界处的问题：时序、噪声、电源、机械结构和固件设计都会影响最后的系统表现。</p>
-            </div>
-            <div class="about-grid">
-              <div class="about-statement">
-                <p>我目前主要做嵌入式与机器人相关项目，关注启动流程、通信链路、运动响应、故障恢复，以及能让调试更快的小工具。</p>
-                <a class="button button-dark" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">查看源码 <i data-lucide="github"></i></a>
-              </div>
-              <div class="stats-grid">
-                <div class="stat"><strong>12</strong><span>公开仓库</span></div>
-                <div class="stat"><strong>4</strong><span>硬件方向</span></div>
-                <div class="stat"><strong>1</strong><span>长期目标：更可靠的机器人</span></div>
-                <div class="stat"><strong>many</strong><span>实验迭代</span></div>
-              </div>
-            </div>
+        <article class="project">
+          <div class="project-head">
+            <h3>STM32F407 Bootloader 与 A/B 分区 OTA</h3>
+            <span class="status status-done">可稳定运行</span>
           </div>
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="timeline-year">现在</span>
-              <div><h3>构建可靠的控制层</h3><p>围绕小型机器人系统做电机控制、远程固件升级和平台集成。</p></div>
-              <i data-lucide="arrow-up-right"></i>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-year">2025</span>
-              <div><h3>竞赛系统实践</h3><p>完成寻线与打靶项目，在实时感知、状态切换和执行机构之间做系统集成。</p></div>
-              <i data-lucide="arrow-up-right"></i>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-year">下一步</span>
-              <div><h3>更多实测与文档</h3><p>把原型记录整理成更清楚的模块、复现实验和可维护文档。</p></div>
-              <i data-lucide="arrow-up-right"></i>
-            </div>
-          </div>
-        </section>
+          <p class="project-en">Dual-bank bootloader with USB CDC firmware update · STM32F407</p>
+          <dl class="project-meta">
+            <div><dt>角色</dt><dd>独立开发</dd></div>
+            <div><dt>时间</dt><dd>2026.01 – 2026.02</dd></div>
+            <div><dt>技术栈</dt><dd>STM32F407 · Bootloader · USB CDC · CRC32 · ESP32-S3</dd></div>
+          </dl>
+          <ul class="project-points">
+            <li>基于 USB CDC 自研固件传输协议：分包接收、有序缓存、分区写入、状态反馈与错误应答，并用 CRC32 做完整性校验。</li>
+            <li>设计扇区状态检查实现按需擦除，降低 Flash 磨损；自定义包含等待、擦除、接收、写入、校验、跳转与恢复的七阶段状态机。</li>
+            <li>配置接收超时、看门狗复位与写入错误检测，升级失败自动回滚；完成 Flash 地址偏移、向量表重定向、堆栈初始化与应用程序稳定跳转，测试升级成功率 100%。</li>
+          </ul>
+          <p class="project-links">
+            <a href="https://github.com/HereOvO/Single-USB-burning-for-AB-partition" target="_blank" rel="noreferrer">Single-USB-burning-for-AB-partition<span aria-hidden="true"> ↗</span></a>
+            <a href="https://github.com/HereOvO/STM32-remote-upgrade" target="_blank" rel="noreferrer">STM32-remote-upgrade<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </article>
 
-        <section class="notes-section page-section" id="notes">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">调试笔记</p>
-              <h2>正在梳理的问题。</h2>
+        <article class="project">
+          <div class="project-head">
+            <h3>轮腿机器人多功能控制器</h3>
+            <span class="status status-done">已完成</span>
+          </div>
+          <p class="project-en">Multi-function wheeled-leg robot controller · FreeRTOS real-time control</p>
+          <dl class="project-meta">
+            <div><dt>角色</dt><dd>独立开发</dd></div>
+            <div><dt>时间</dt><dd>2026.01 – 2026.02</dd></div>
+            <div><dt>技术栈</dt><dd>STM32F407 · FreeRTOS · MPU6050 · PCA9685 · UART</dd></div>
+          </dl>
+          <ul class="project-points">
+            <li>基于 FreeRTOS 实现 IMU、电机、舵机与串口多任务并发。</li>
+            <li>驱动 MPU6050 / PCA9685 实现 16 路舵机控制，通过四路定时器完成编码器测速与电机闭环控制，建立 100Hz UART 状态回传。</li>
+            <li>实现多传感器、多执行器的高实时协同控制，保证轮腿机器人运行稳定、响应迅速。</li>
+          </ul>
+          <p class="project-links">
+            <a href="https://github.com/HereOvO/wheeled-leg-robot" target="_blank" rel="noreferrer">wheeled-leg-robot<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </article>
+
+        <div class="section-subhead">
+          <h3>其他项目</h3>
+        </div>
+        <div class="card-grid">
+          <a class="mini-card" href="https://github.com/HereOvO/Line-inspection-and-target-shooting" target="_blank" rel="noreferrer">
+            <h4>寻线与打靶机器人</h4>
+            <p>2025 年电赛：寻线、目标识别与定时执行机构的状态切换与硬件动作。</p>
+            <span class="mini-tags">STM32 · 实时 I/O · 状态机</span>
+          </a>
+          <a class="mini-card" href="https://github.com/HereOvO/Desktop-wallpaper-display" target="_blank" rel="noreferrer">
+            <h4>桌面壁纸显示器</h4>
+            <p>ESP32-S3 通过 Wi-Fi 网页上传图片，USB CDC 下发给 STM32F407 显示并写入 SD 卡。</p>
+            <span class="mini-tags">ESP32-S3 · STM32F407 · ILI9341 · SD</span>
+          </a>
+          <a class="mini-card" href="https://github.com/HereOvO/2Dpan-tilt-on-car" target="_blank" rel="noreferrer">
+            <h4>二维云台驱动</h4>
+            <p>STM32 双舵机云台，约 100Hz 闭环跟踪，USB CDC 二进制协议与在线调参。</p>
+            <span class="mini-tags">STM32F407 · USB CDC · 舵机</span>
+          </a>
+          <a class="mini-card" href="https://github.com/HereOvO/PWM-Gennerator" target="_blank" rel="noreferrer">
+            <h4>PWM 发生器</h4>
+            <p>STM32F103 + PySide6 上位机，7 通道 PWM 频率与占空比动态配置。</p>
+            <span class="mini-tags">STM32F103 · USB CDC · PySide6</span>
+          </a>
+          <a class="mini-card" href="https://github.com/HereOvO/RemoteProgramming" target="_blank" rel="noreferrer">
+            <h4>远程烧录</h4>
+            <p>双 MCU 配合的远程烧录方案，含接线说明与状态握手。</p>
+            <span class="mini-tags">STM32 · 烧录 · 通信</span>
+          </a>
+          <a class="mini-card" href="https://github.com/HereOvO/SystemViewPreConfig" target="_blank" rel="noreferrer">
+            <h4>SystemView 移植配置</h4>
+            <p>FreeRTOS + SEGGER SystemView 的前置配置与版本适配记录。</p>
+            <span class="mini-tags">FreeRTOS · SystemView · 调试</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 技能 -->
+      <section class="section" id="skills">
+        <div class="section-head">
+          <h2>专业技能</h2>
+          <span class="section-en">Skills</span>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-group">
+            <h3>编程与工具</h3>
+            <div class="chips chips-dark">
+              <span class="tag">C / C++</span>
+              <span class="tag">Python</span>
+              <span class="tag">Keil MDK</span>
+              <span class="tag">STM32CubeMX</span>
+              <span class="tag">CubeProgrammer</span>
+              <span class="tag">PlatformIO</span>
+              <span class="tag">VSCode</span>
+              <span class="tag">Git</span>
+              <span class="tag">串口调试</span>
+              <span class="tag">示波器</span>
+              <span class="tag">逻辑分析仪</span>
             </div>
-            <p class="section-intro">后续这里会放更短的技术记录。现在先以仓库历史作为项目进展的主记录。</p>
           </div>
-          <div class="note-list">
-            <a class="note-row" href="https://github.com/HereOvO/STM32-remote-upgrade" target="_blank" rel="noreferrer">
-              <span class="note-number">01</span><span class="note-title">远程升级路径怎样才算可恢复？</span><span class="note-tag">升级</span><i data-lucide="arrow-up-right"></i>
-            </a>
-            <a class="note-row" href="https://github.com/HereOvO/chassis-motor-control" target="_blank" rel="noreferrer">
-              <span class="note-number">02</span><span class="note-title">四个电机、一套底盘、更少意外</span><span class="note-tag">控制</span><i data-lucide="arrow-up-right"></i>
-            </a>
-            <a class="note-row" href="https://github.com/HereOvO/Single-USB-burning-for-AB-partition" target="_blank" rel="noreferrer">
-              <span class="note-number">03</span><span class="note-title">A/B 分区下的单 USB 烧录流程</span><span class="note-tag">固件</span><i data-lucide="arrow-up-right"></i>
-            </a>
+          <div class="skill-group">
+            <h3>单片机与实时系统</h3>
+            <div class="chips chips-dark">
+              <span class="tag">STM32</span>
+              <span class="tag">STM32F103</span>
+              <span class="tag">ESP32 / ESP32-S3</span>
+              <span class="tag">HAL</span>
+              <span class="tag">FreeRTOS</span>
+              <span class="tag">UART</span>
+              <span class="tag">I2C</span>
+              <span class="tag">SPI</span>
+              <span class="tag">USB CDC</span>
+              <span class="tag">PWM</span>
+              <span class="tag">编码器</span>
+              <span class="tag">PID / 前馈</span>
+              <span class="tag">姿态解算</span>
+            </div>
           </div>
-        </section>
+          <div class="skill-group">
+            <h3>硬件设计与调试</h3>
+            <div class="chips chips-dark">
+              <span class="tag">原理图</span>
+              <span class="tag">PCB</span>
+              <span class="tag">Altium Designer</span>
+              <span class="tag">立创EDA</span>
+              <span class="tag">器件选型</span>
+              <span class="tag">电源树</span>
+              <span class="tag">Buck / LDO</span>
+              <span class="tag">隔离</span>
+              <span class="tag">电机驱动</span>
+              <span class="tag">板级 bring-up</span>
+              <span class="tag">SolidWorks / Fusion 360</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>底层固件与 Linux</h3>
+            <div class="chips chips-dark">
+              <span class="tag">Bootloader</span>
+              <span class="tag">Flash</span>
+              <span class="tag">CRC32</span>
+              <span class="tag">A/B 分区</span>
+              <span class="tag">看门狗</span>
+              <span class="tag">向量表重定向</span>
+              <span class="tag">Shell</span>
+              <span class="tag">进程 / 线程</span>
+              <span class="tag">字符设备</span>
+              <span class="tag">Platform / 设备树</span>
+              <span class="tag">GPIO/I2C/SPI/UART 驱动</span>
+              <span class="tag">嵌入式 Linux（IMX6ULL）</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>机器人与系统集成</h3>
+            <div class="chips chips-dark">
+              <span class="tag">ROS Noetic</span>
+              <span class="tag">SLAM</span>
+              <span class="tag">AMCL</span>
+              <span class="tag">move_base</span>
+              <span class="tag">RK3568</span>
+              <span class="tag">RKNN</span>
+              <span class="tag">HTTP API</span>
+              <span class="tag">Python 上位机</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="contact-section page-section" id="contact">
-          <div class="contact-inner">
-            <p class="eyebrow">联系 / 04</p>
-            <h2>有值得测试的<br /><em>系统问题？</em></h2>
-            <p>可以从 GitHub 仓库开始交流。我对能让嵌入式系统更清楚、更稳、更可复现的问题感兴趣。</p>
-            <a class="button button-primary" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">从 GitHub 开始 <i data-lucide="arrow-up-right"></i></a>
-          </div>
-        </section>
-      </main>
+      <!-- 奖项 -->
+      <section class="section" id="awards">
+        <div class="section-head">
+          <h2>竞赛成果</h2>
+          <span class="section-en">Awards</span>
+        </div>
+        <ul class="award-list">
+          <li class="award">
+            <span class="award-year">2025</span>
+            <div class="award-body">
+              <h3>全国大学生算法精英赛 · 智慧社区赛题</h3>
+              <p>全国一等奖</p>
+            </div>
+            <span class="award-level">国家级一等奖</span>
+          </li>
+          <li class="award">
+            <span class="award-year">2026</span>
+            <div class="award-body">
+              <h3>全国大学生物联网设计竞赛 · 移远赛题</h3>
+              <p>全国二等奖</p>
+            </div>
+            <span class="award-level">国家级二等奖</span>
+          </li>
+          <li class="award">
+            <span class="award-year">2026</span>
+            <div class="award-body">
+              <h3>大学生服务外包创新创业大赛 · 企业命题</h3>
+              <p>全国三等奖</p>
+            </div>
+            <span class="award-level">国家级三等奖</span>
+          </li>
+          <li class="award">
+            <span class="award-year">2026</span>
+            <div class="award-body">
+              <h3>全国大学生嵌入式芯片与系统设计竞赛 · 移远赛题</h3>
+              <p>全国三等奖</p>
+            </div>
+            <span class="award-level">国家级三等奖</span>
+          </li>
+        </ul>
+      </section>
 
-      <footer class="site-footer">
-        <span>(c) <span id="year"></span> HereOvO</span>
-        <span>围绕硬件构建和验证</span>
-        <a href="#top">回到顶部 <i data-lucide="arrow-up"></i></a>
-      </footer>
-    </div>
-    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+      <!-- 经历 -->
+      <section class="section" id="timeline">
+        <div class="section-head">
+          <h2>项目与竞赛经历</h2>
+          <span class="section-en">Timeline</span>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span class="timeline-date">2024.09</span>
+            <div class="timeline-body">
+              <h3>进入河海大学自动化专业</h3>
+              <p>开始系统学习嵌入式开发与硬件设计，方向逐步聚焦到固件、电机控制与机器人系统。</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">2025</span>
+            <div class="timeline-body">
+              <h3>全国大学生电子设计竞赛 · 寻线与打靶</h3>
+              <p>在实时感知、状态切换与执行机构之间做系统集成，完成寻线识别与打靶动作。</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">2026.01 – 02</span>
+            <div class="timeline-body">
+              <h3>底层固件专项：Bootloader / A-B 分区 OTA 与轮腿机器人控制器</h3>
+              <p>围绕可靠升级与实时控制完成两套底层固件，形成可复用的工程化方法。</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">2026.04 – 08</span>
+            <div class="timeline-body">
+              <h3>智能安防工业巡检机器人系统（队长）</h3>
+              <p>负责供电与板卡设计、STM32 底盘固件与整机联调，协同 RK3568 侧导航与视觉识别。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 仓库索引 -->
+      <section class="section" id="index">
+        <div class="section-head">
+          <h2>项目索引</h2>
+          <span class="section-en">Repositories</span>
+        </div>
+        <div class="table-wrap">
+          <table class="repo-table">
+            <thead>
+              <tr>
+                <th scope="col">仓库</th>
+                <th scope="col">方向</th>
+                <th scope="col">说明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://github.com/HereOvO/chassis-motor-control" target="_blank" rel="noreferrer">chassis-motor-control</a></td>
+                <td>固件</td>
+                <td>STM32F407 四电机底盘控制固件，FreeRTOS + 里程计 + PID 前馈</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/Single-USB-burning-for-AB-partition" target="_blank" rel="noreferrer">Single-USB-burning-for-AB-partition</a></td>
+                <td>固件</td>
+                <td>STM32F407 双分区 Bootloader 与单 USB 烧录流程</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/STM32-remote-upgrade" target="_blank" rel="noreferrer">STM32-remote-upgrade</a></td>
+                <td>固件</td>
+                <td>ESP32-S3 作为 OTA Host 的远程固件升级方案</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/wheeled-leg-robot" target="_blank" rel="noreferrer">wheeled-leg-robot</a></td>
+                <td>控制</td>
+                <td>轮腿机器人多功能控制器：IMU、舵机、电机与串口多任务</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/2Dpan-tilt-on-car" target="_blank" rel="noreferrer">2Dpan-tilt-on-car</a></td>
+                <td>控制</td>
+                <td>小车二维云台驱动，USB CDC 协议与约 100Hz 闭环跟踪</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/Line-inspection-and-target-shooting" target="_blank" rel="noreferrer">Line-inspection-and-target-shooting</a></td>
+                <td>竞赛</td>
+                <td>2025 年电赛寻线与打靶机器人</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/Desktop-wallpaper-display" target="_blank" rel="noreferrer">Desktop-wallpaper-display</a></td>
+                <td>硬件</td>
+                <td>ESP32-S3 + STM32F407 + ILI9341 桌面壁纸显示器</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/PWM-Gennerator" target="_blank" rel="noreferrer">PWM-Gennerator</a></td>
+                <td>工具</td>
+                <td>STM32F103 PWM 发生器与 PySide6 上位机</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/RemoteProgramming" target="_blank" rel="noreferrer">RemoteProgramming</a></td>
+                <td>工具</td>
+                <td>双 MCU 配合的远程烧录方案</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/SystemViewPreConfig" target="_blank" rel="noreferrer">SystemViewPreConfig</a></td>
+                <td>工具</td>
+                <td>FreeRTOS + SEGGER SystemView 移植配置</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/26fwwb-code" target="_blank" rel="noreferrer">26fwwb-code</a></td>
+                <td>竞赛</td>
+                <td>2026 年服务外包创新创业大赛代码</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/HereOvO/IMX6ULL-Learn" target="_blank" rel="noreferrer">IMX6ULL-Learn</a></td>
+                <td>学习</td>
+                <td>IMX6ULL 嵌入式 Linux 学习记录</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-tail">
+          <a class="text-link" href="https://github.com/HereOvO?tab=repositories" target="_blank" rel="noreferrer">在 GitHub 查看全部仓库<span aria-hidden="true"> ↗</span></a>
+        </p>
+      </section>
+
+      <!-- 联系 -->
+      <section class="section" id="contact">
+        <div class="section-head">
+          <h2>联系</h2>
+          <span class="section-en">Contact</span>
+        </div>
+        <p class="lede">
+          对嵌入式系统、固件升级、电机控制或小型机器人平台感兴趣，欢迎通过邮件或 GitHub 交流。
+        </p>
+        <div class="contact-row">
+          <a class="button" href="mailto:2676896398@qq.com">发邮件</a>
+          <a class="button button-ghost" href="https://github.com/HereOvO" target="_blank" rel="noreferrer">GitHub<span aria-hidden="true"> ↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year">2026</span> 黄丰帆 · HereOvO</span>
+      <span class="footer-note">嵌入式软硬件 / 固件 / 机器人系统</span>
+      <a href="#top">回到顶部 ↑</a>
+    </footer>
+
     <script src="app.js"></script>
   </body>
 </html>
